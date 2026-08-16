@@ -4,7 +4,6 @@ import { services, serviceCategories } from "@/data/services";
 import { getLatestPosts } from "@/data/posts";
 import { siteConfig } from "@/data/site";
 import {
-  ReededPanel,
   Button,
   Eyebrow,
   ServiceIndex,
@@ -19,10 +18,10 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center">
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero-farm.jpg"
+            src="/images/WhatsApp Image 2026-06-22 at 5.38.53 PM.jpeg"
             alt="Green Africa nursery with grafted fruit tree seedlings"
             fill
             priority
@@ -31,21 +30,21 @@ export default function Home() {
             placeholder="blur"
             blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAn/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABMx/9k="
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-forest/60 via-forest/30 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-jungle-900/80 via-jungle-800/60 to-jungle-700/40" />
         </div>
 
         <div className="relative z-10 mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8 w-full">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div className="lg:col-start-1 lg:col-end-2 lg:row-start-1">
-              <Eyebrow variant="numbered" number="01">
+              <Eyebrow variant="numbered" number="01" className="text-clay-400">
                 Climate-Smart Agriculture for Kenya
               </Eyebrow>
-              <h1 className="font-display font-bold tracking-tight-display text-cream line-height-tight mt-4 mb-8 text-5xl sm:text-6xl md:text-7xl lg:text-[100px] xl:text-[120px] max-w-[90%]">
+              <h1 className="font-display font-bold tracking-tight-display text-ink line-height-tight mt-4 mb-8 text-5xl sm:text-6xl md:text-7xl lg:text-[100px] xl:text-[120px] max-w-[90%]">
                 Growing Resilience
                 <br />
-                <span className="text-clay">From the Ground Up</span>
+                <span className="text-clay-400">From the Ground Up</span>
               </h1>
-              <p className="text-sage/90 max-w-prose text-lg sm:text-xl mb-10 font-light leading-relaxed">
+              <p className="text-ink-muted max-w-prose text-lg sm:text-xl mb-10 font-light leading-relaxed">
                 Nairobi-based supplier of seedlings, irrigation, greenhouses, solar dryers, water storage, soil testing, compost, and farmer training — serving farms, schools, NGOs, and county governments across Kenya.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -59,55 +58,53 @@ export default function Home() {
             </div>
 
             <div className="hidden lg:block lg:col-start-2 lg:col-end-3 lg:row-start-1">
-              <ReededPanel variant="light" padding="lg" className="max-w-md ml-auto">
-                <Eyebrow>Our Mission</Eyebrow>
-                <h3 className="font-display font-semibold text-2xl sm:text-3xl text-forest tracking-tight-display mt-2 mb-4 line-height-snug">
+              <div className="glass-card max-w-md ml-auto">
+                <Eyebrow className="text-sage-400">Our Mission</Eyebrow>
+                <h3 className="font-display font-semibold text-2xl sm:text-3xl text-jungle-100 tracking-tight-display mt-2 mb-4 line-height-snug">
                   Equip every Kenyan grower with climate-smart tools that work.
                 </h3>
-                <ul className="space-y-4 text-ink/80 font-mono text-sm leading-relaxed">
+                <ul className="space-y-4 text-ink-muted font-mono text-sm leading-relaxed">
                   <li className="flex items-start gap-3">
-                    <span className="text-clay font-bold">01</span>
+                    <span className="text-clay-400 font-bold">01</span>
                     <span>40+ seedling varieties — KEPHIS certified, 90%+ survival</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-clay font-bold">02</span>
+                    <span className="text-clay-400 font-bold">02</span>
                     <span>Solar-powered irrigation — zero fuel cost, 25-year panel life</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-clay font-bold">03</span>
+                    <span className="text-clay-400 font-bold">03</span>
                     <span>200+ greenhouses installed across Central, Rift Valley, Eastern</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-clay font-bold">04</span>
+                    <span className="text-clay-400 font-bold">04</span>
                     <span>2,300+ farmers trained since 2021 with 6-month follow-up</span>
                   </li>
                 </ul>
-                <SectionDivider variant="light" className="my-6" />
+                <SectionDivider variant="dark" className="my-6" />
                 <div className="flex items-center gap-3">
-                  <span className="font-display font-bold text-3xl text-forest">+254</span>
-                  <span className="font-mono text-sm text-sage">791 365 105</span>
+                  <span className="font-display font-bold text-3xl text-jungle-100">+254</span>
+                  <span className="font-mono text-sm text-ink-muted">791 365 105</span>
                 </div>
-                <div className="font-mono text-xs text-sage mt-1">Mpaka House, Westlands Road, Nairobi</div>
-              </ReededPanel>
+                <div className="font-mono text-xs text-ink-muted mt-1">Mpaka House, Westlands Road, Nairobi</div>
+              </div>
             </div>
           </div>
         </div>
-
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cream to-transparent pointer-events-none" aria-hidden="true" />
       </section>
 
       {/* Services Spread */}
-      <section className="py-20 sm:py-28 lg:py-36 bg-cream">
+      <section className="py-20 sm:py-28 lg:py-36 bg-jungle-900/50">
         <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-16">
             <div>
-              <Eyebrow variant="numbered" number="02">
+              <Eyebrow variant="numbered" number="02" className="text-clay-400">
                 Our Services Catalogue
               </Eyebrow>
-              <h2 className="font-display font-bold tracking-tight-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-forest line-height-tight mt-2 mb-4 max-w-2xl">
+              <h2 className="font-display font-bold tracking-tight-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-jungle-100 line-height-tight mt-2 mb-4 max-w-2xl">
                 Twelve solutions. One integrated approach.
               </h2>
-              <p className="text-ink/70 max-w-prose text-lg leading-relaxed">
+              <p className="text-ink-muted max-w-prose text-lg leading-relaxed">
                 From seedling to harvest, from water source to market. Each service connects to the next — because resilient farming systems don't work in isolation.
               </p>
             </div>
@@ -115,7 +112,7 @@ export default function Home() {
               {serviceCategories.map((cat) => (
                 <button
                   key={cat.value}
-                  className="font-mono text-xs uppercase tracking-wider text-sage bg-bone px-4 py-2 brutalist-border-forest hover:bg-forest hover:text-cream transition-all"
+                  className="font-mono text-xs uppercase tracking-wider text-ink-muted glass px-4 py-2 border-jungle-400/20 hover:bg-jungle-700/50 hover:text-jungle-100 transition-all"
                 >
                   {cat.label}
                 </button>
@@ -123,26 +120,31 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="space-y-16">
+          <div className="space-y-12">
             {featuredServices.map((service, index) => (
               <article
                 key={service.slug}
                 className={index % 2 === 0 ? "grid lg:grid-cols-2 gap-8 lg:gap-16 items-center" : "grid lg:grid-cols-2 gap-8 lg:gap-16 items-center lg:direction-rtl"}
               >
                 <div className={index % 2 === 1 ? "lg:col-start-2" : ""}>
-                  <div className="relative aspect-[4/3] lg:aspect-[5/4] overflow-hidden brutalist-border-forest">
-                    <div className="absolute inset-0 bg-bone flex items-center justify-center text-sage font-mono text-xs">
-                      <span className="text-center p-4">Image: {service.image}</span>
-                    </div>
-                    {/* Placeholder for actual image */}
+                  <div className="relative aspect-[4/3] lg:aspect-[5/4] overflow-hidden rounded-2xl glass-card">
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      className="object-cover"
+                      placeholder="blur"
+                      blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAn/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABMx/9k="
+                    />
                   </div>
                 </div>
                 <div className={index % 2 === 0 ? "lg:col-start-2" : ""}>
                   <ServiceIndex number={String(index + 1).padStart(2, "0")} title={service.title} size="lg" />
-                  <p className="mt-6 text-ink/80 leading-relaxed max-w-prose">{service.shortDescription}</p>
+                  <p className="mt-6 text-ink-muted leading-relaxed max-w-prose">{service.shortDescription}</p>
                   <div className="mt-6 flex flex-wrap gap-2">
                     {service.features.slice(0, 3).map((feature, i) => (
-                      <span key={i} className="font-mono text-xs text-sage bg-bone px-3 py-1.5 brutalist-border-forest">
+                      <span key={i} className="font-mono text-xs text-ink-muted glass px-3 py-1.5 border-jungle-400/20">
                         {feature}
                       </span>
                     ))}
@@ -164,17 +166,16 @@ export default function Home() {
       </section>
 
       {/* Impact Stats */}
-      <section className="py-20 sm:py-28 bg-forest relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-5" aria-hidden="true" />
+      <section className="py-20 sm:py-28 bg-jungle-800 relative overflow-hidden noise-bg">
         <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-16">
-            <Eyebrow variant="numbered" number="03" className="text-clay">
+            <Eyebrow variant="numbered" number="03" className="text-clay-400">
               Impact in Numbers
             </Eyebrow>
-            <h2 className="font-display font-bold tracking-tight-display text-4xl sm:text-5xl md:text-6xl text-cream line-height-tight mt-2 mb-4">
+            <h2 className="font-display font-bold tracking-tight-display text-4xl sm:text-5xl md:text-6xl text-jungle-100 line-height-tight mt-2 mb-4">
               Measured by what grows.
             </h2>
-            <p className="text-sage max-w-prose mx-auto">
+            <p className="text-ink-muted max-w-prose mx-auto">
               Estimates based on 2021–2024 project data. Final figures pending client verification.
             </p>
           </div>
@@ -189,17 +190,17 @@ export default function Home() {
       </section>
 
       {/* Field Notes Preview */}
-      <section className="py-20 sm:py-28 bg-cream">
+      <section className="py-20 sm:py-28 bg-jungle-900/50">
         <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-16">
             <div>
-              <Eyebrow variant="numbered" number="04">
+              <Eyebrow variant="numbered" number="04" className="text-clay-400">
                 Field Notes
               </Eyebrow>
-              <h2 className="font-display font-bold tracking-tight-display text-4xl sm:text-5xl md:text-6xl text-forest line-height-tight mt-2 mb-4">
+              <h2 className="font-display font-bold tracking-tight-display text-4xl sm:text-5xl md:text-6xl text-jungle-100 line-height-tight mt-2 mb-4">
                 Practical knowledge from the field.
               </h2>
-              <p className="text-ink/70 max-w-prose text-lg leading-relaxed">
+              <p className="text-ink-muted max-w-prose text-lg leading-relaxed">
                 Not SEO filler. Real agronomy guides, seasonal advice, and project learnings from our team and partner farms.
               </p>
             </div>
@@ -210,14 +211,20 @@ export default function Home() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {latestPosts.map((post) => (
-              <article key={post.slug} className="group brutalist-border-forest overflow-hidden bg-bone">
-                <div className="relative aspect-[16/10] overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-forest/20 to-moss/20 flex items-center justify-center text-sage font-mono text-xs">
-                    <span>Image: {post.image}</span>
-                  </div>
+              <article key={post.slug} className="group glass-card overflow-hidden flex flex-col h-full">
+                <div className="relative aspect-[16/10] overflow-hidden rounded-xl">
+                  <Image
+                    src={post.image}
+                    alt={post.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    placeholder="blur"
+                    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAn/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABMx/9k="
+                  />
                 </div>
-                <div className="p-6 sm:p-8">
-                  <div className="flex items-center gap-2 font-mono text-xs text-sage mb-3">
+                <div className="p-6 sm:p-8 flex-1 flex flex-col">
+                  <div className="flex items-center gap-2 font-mono text-xs text-sage-400 mb-3">
                     <span>{post.category}</span>
                     <span>•</span>
                     <time dateTime={post.publishedAt}>{new Date(post.publishedAt).toLocaleDateString("en-KE", { month: "short", day: "numeric", year: "numeric" })}</time>
@@ -225,12 +232,12 @@ export default function Home() {
                     <span>{post.readTime}</span>
                   </div>
                   <Link href={`/journal/${post.slug}`} className="block">
-                    <h3 className="font-display font-semibold text-xl sm:text-2xl text-forest tracking-tight-display line-height-snug mb-3 group-hover:text-clay transition-colors">
+                    <h3 className="font-display font-semibold text-xl sm:text-2xl text-jungle-100 tracking-tight-display line-height-snug mb-3 group-hover:text-clay-400 transition-colors">
                       {post.title}
                     </h3>
                   </Link>
-                  <p className="text-ink/70 leading-relaxed mb-4 line-clamp-3">{post.excerpt}</p>
-                  <Link href={`/journal/${post.slug}`} className="font-mono text-xs uppercase tracking-wider text-moss hover:text-clay transition-colors inline-flex items-center gap-1">
+                  <p className="text-ink-muted leading-relaxed mb-4 line-clamp-3 flex-1">{post.excerpt}</p>
+                  <Link href={`/journal/${post.slug}`} className="font-mono text-xs uppercase tracking-wider text-sage-400 hover:text-clay-400 transition-colors inline-flex items-center gap-1 mt-auto">
                     Read more
                     <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4-4 4m-6-8h10" />
@@ -244,17 +251,16 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 sm:py-28 bg-forest relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-5" aria-hidden="true" />
+      <section className="py-20 sm:py-28 bg-jungle-800 relative overflow-hidden noise-bg">
         <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8 relative">
-          <ReededPanel variant="dark" padding="xl" className="max-w-3xl mx-auto text-center brutalist-border">
-            <Eyebrow variant="numbered" number="05" className="text-clay">
+          <div className="glass-card max-w-3xl mx-auto text-center brutalist-border-jungle p-8 sm:p-12 lg:p-16">
+            <Eyebrow variant="numbered" number="05" className="text-clay-400">
               Ready to Start?
             </Eyebrow>
-            <h2 className="font-display font-bold tracking-tight-display text-4xl sm:text-5xl md:text-6xl text-cream line-height-tight mt-2 mb-6">
+            <h2 className="font-display font-bold tracking-tight-display text-4xl sm:text-5xl md:text-6xl text-jungle-100 line-height-tight mt-2 mb-6">
               Let's build your climate-smart system.
             </h2>
-            <p className="text-sage max-w-prose mx-auto mb-8 text-lg leading-relaxed">
+            <p className="text-ink-muted max-w-prose mx-auto mb-8 text-lg leading-relaxed">
               Tell us your land size, crops, water source, and goals. We'll design a system that fits — with real numbers, real timelines, and real support.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -265,7 +271,7 @@ export default function Home() {
                 WhatsApp Us
               </LinkButton>
             </div>
-          </ReededPanel>
+          </div>
         </div>
       </section>
     </>
@@ -275,12 +281,12 @@ export default function Home() {
 function ImpactStat({ label, value, suffix, note }: { label: string; value: string; suffix?: string; note: string }) {
   return (
     <div className="text-center">
-      <div className="font-display font-bold text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-cream tracking-tight-display line-height-tight">
+      <div className="font-display font-bold text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-jungle-100 tracking-tight-display line-height-tight">
         {value}
-        {suffix && <span className="text-clay">{suffix}</span>}
+        {suffix && <span className="text-clay-400">{suffix}</span>}
       </div>
-      <div className="font-mono text-xs uppercase tracking-widest text-clay mt-2">{label}</div>
-      <div className="font-mono text-xs text-sage/70 mt-1">{note}</div>
+      <div className="font-mono text-xs uppercase tracking-widest text-clay-400 mt-2">{label}</div>
+      <div className="font-mono text-xs text-ink-muted mt-1">{note}</div>
     </div>
   );
 }

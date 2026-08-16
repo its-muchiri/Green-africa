@@ -1,30 +1,71 @@
 @import "tailwindcss";
 
 :root {
-  --forest: #1F3A2E;
-  --moss: #4A6C4E;
-  --sage: #8FA888;
-  --cream: #F5F0E6;
-  --bone: #EDE6D6;
-  --clay: #B8916A;
-  --ink: #201D17;
-  --white: #FFFFFF;
-  --black: #000000;
+  --jungle-900: #0D1F14;
+  --jungle-800: #122D1E;
+  --jungle-700: #183D28;
+  --jungle-600: #1D4D32;
+  --jungle-500: #25633E;
+  --jungle-400: #348552;
+  --jungle-300: #4BAE6B;
+  --jungle-200: #7FD49E;
+  --jungle-100: #B8E8D0;
 
-  --background: var(--cream);
+  --moss-600: #3D5A42;
+  --moss-500: #4A6C4E;
+  --moss-400: #5A825E;
+
+  --sage-500: #8FA888;
+  --sage-400: #A3B99E;
+
+  --clay-600: #9D7A55;
+  --clay-500: #B8916A;
+  --clay-400: #CBA882;
+
+  --ink: #F0F5F1;
+  --ink-muted: #C8D4CC;
+
+  --background: var(--jungle-900);
+  --surface: var(--jungle-800);
+  --surface-elevated: var(--jungle-700);
   --foreground: var(--ink);
+  --foreground-muted: var(--ink-muted);
+
+  --glass-light: rgba(20, 45, 30, 0.7);
+  --glass-border: rgba(75, 174, 107, 0.15);
+  --glass-highlight: rgba(255, 255, 255, 0.03);
 }
 
 @theme inline {
-  --color-forest: var(--forest);
-  --color-moss: var(--moss);
-  --color-sage: var(--sage);
-  --color-cream: var(--cream);
-  --color-bone: var(--bone);
-  --color-clay: var(--clay);
+  --color-jungle-900: var(--jungle-900);
+  --color-jungle-800: var(--jungle-800);
+  --color-jungle-700: var(--jungle-700);
+  --color-jungle-600: var(--jungle-600);
+  --color-jungle-500: var(--jungle-500);
+  --color-jungle-400: var(--jungle-400);
+  --color-jungle-300: var(--jungle-300);
+  --color-jungle-200: var(--jungle-200);
+  --color-jungle-100: var(--jungle-100);
+
+  --color-moss-600: var(--moss-600);
+  --color-moss-500: var(--moss-500);
+  --color-moss-400: var(--moss-400);
+
+  --color-sage-500: var(--sage-500);
+  --color-sage-400: var(--sage-400);
+
+  --color-clay-600: var(--clay-600);
+  --color-clay-500: var(--clay-500);
+  --color-clay-400: var(--clay-400);
+
   --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+
   --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
   --color-foreground: var(--foreground);
+  --color-foreground-muted: var(--foreground-muted);
 
   --font-display: var(--font-funnel-display);
   --font-body: var(--font-inter);
@@ -44,8 +85,8 @@
   }
 
   body {
-    background: var(--cream);
-    color: var(--ink);
+    background: var(--background);
+    color: var(--foreground);
     font-family: var(--font-body), system-ui, sans-serif;
     font-weight: 400;
     line-height: 1.7;
@@ -54,12 +95,12 @@
   }
 
   ::selection {
-    background: var(--clay);
-    color: var(--cream);
+    background: var(--clay-500);
+    color: var(--jungle-900);
   }
 
   :focus-visible {
-    outline: 2px solid var(--clay);
+    outline: 2px solid var(--clay-500);
     outline-offset: 2px;
   }
 
@@ -72,54 +113,6 @@
       transition-duration: 0.01ms !important;
       scroll-behavior: auto !important;
     }
-  }
-}
-
-@layer components {
-  .reeded-glass {
-    position: relative;
-    background: rgba(245, 240, 230, 0.35);
-    backdrop-filter: blur(12px) saturate(120%);
-    -webkit-backdrop-filter: blur(12px) saturate(120%);
-    border: 1px solid rgba(255, 255, 255, 0.4);
-  }
-
-  .reeded-glass::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: repeating-linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0.18) 0px,
-      rgba(255, 255, 255, 0.02) 6px,
-      rgba(255, 255, 255, 0.18) 12px
-    );
-    mix-blend-mode: overlay;
-    pointer-events: none;
-  }
-
-  .brutalist-border {
-    border: 2px solid var(--ink);
-    border-radius: 0;
-    box-shadow: 4px 4px 0 var(--ink);
-  }
-
-  .brutalist-border-forest {
-    border: 2px solid var(--forest);
-    border-radius: 0;
-    box-shadow: 4px 4px 0 var(--forest);
-  }
-
-  .hairline-divider {
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(143, 168, 136, 0.3), transparent);
-    border: none;
-  }
-
-  .hairline-divider-dark {
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    border: none;
   }
 }
 
@@ -147,4 +140,190 @@
   .max-w-prose {
     max-width: 65ch;
   }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+}
+
+/* Glass Morphism Styles */
+.glass {
+  position: relative;
+  background: var(--glass-light);
+  backdrop-filter: blur(20px) saturate(150%);
+  -webkit-backdrop-filter: blur(20px) saturate(150%);
+  border: 1px solid var(--glass-border);
+}
+
+.glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--glass-highlight) 0px,
+    transparent 4px,
+    var(--glass-highlight) 8px
+  );
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.glass-dark {
+  background: rgba(10, 30, 20, 0.8);
+  border-color: rgba(52, 133, 82, 0.2);
+}
+
+.glass-card {
+  background: var(--glass-light);
+  backdrop-filter: blur(20px) saturate(150%);
+  -webkit-backdrop-filter: blur(20px) saturate(150%);
+  border: 1px solid var(--glass-border);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 640px) {
+  .glass-card {
+    padding: 2rem;
+  }
+}
+
+.glass-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--glass-highlight) 0px,
+    transparent 4px,
+    var(--glass-highlight) 8px
+  );
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  opacity: 0.6;
+  border-radius: 1rem;
+}
+
+.glass-card:hover {
+  border-color: var(--clay-500);
+  box-shadow: 
+    0 20px 40px -10px rgba(0, 0, 0, 0.4),
+    0 0 0 1px var(--clay-500),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.glass-panel {
+  background: var(--glass-light);
+  backdrop-filter: blur(20px) saturate(150%);
+  -webkit-backdrop-filter: blur(20px) saturate(150%);
+  border: 1px solid var(--glass-border);
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+@media (min-width: 640px) {
+  .glass-panel {
+    padding: 1.5rem;
+  }
+}
+
+.glass-nav {
+  background: rgba(10, 30, 20, 0.8);
+  backdrop-filter: blur(20px) saturate(150%);
+  -webkit-backdrop-filter: blur(20px) saturate(150%);
+  border-bottom: 1px solid rgba(52, 133, 82, 0.2);
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-radius: 0;
+}
+
+.brutalist-border {
+  border: 2px solid var(--clay-500);
+  border-radius: 0;
+  box-shadow: 4px 4px 0 var(--clay-500);
+}
+
+.brutalist-border-jungle {
+  border: 2px solid var(--jungle-300);
+  border-radius: 0;
+  box-shadow: 4px 4px 0 var(--jungle-300);
+}
+
+.hairline-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--sage-500), transparent);
+  border: none;
+}
+
+.hairline-divider-subtle {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(75, 174, 107, 0.3), transparent);
+  border: none;
+}
+
+.text-gradient-jungle {
+  background: linear-gradient(135deg, var(--jungle-100), var(--sage-400), var(--clay-400));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-clay {
+  background: linear-gradient(135deg, var(--clay-400), var(--clay-600));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.noise-bg {
+  position: relative;
+}
+
+.noise-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  opacity: 0.03;
+  pointer-events: none;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }

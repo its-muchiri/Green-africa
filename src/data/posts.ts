@@ -4,8 +4,7 @@ export const journalPosts: JournalPost[] = [
   {
     slug: "drip-irrigation-design-guide-kenya",
     title: "Designing Drip Irrigation for Kenyan Smallholders: A Practical Guide",
-    excerpt:
-      "From water source to emitter — how to size mains, zone by crop, and choose the right solar pump for your acreage.",
+    excerpt: "From water source to emitter — how to size mains, zone by crop, and choose the right solar pump for your acreage.",
     content: `
 ## Why Drip Irrigation Matters in Kenya
 
@@ -152,14 +151,13 @@ We survey, design, supply, and install — with 12-month operator support. [Cont
     author: "Green Africa Agronomy Team",
     publishedAt: "2025-01-15",
     readTime: "12 min",
-    image: "/images/journal-drip-guide.jpg",
+    image: "/images/WhatsApp Image 2026-06-22 at 5.38.53 PM (1).jpeg",
     tags: ["drip irrigation", "solar pump", "design guide", "water management", "Kenya farming"],
   },
   {
     slug: "soil-testing-why-when-how-kenya",
     title: "Soil Testing in Kenya: Why, When, and How to Read the Results",
-    excerpt:
-      "Most Kenyan farms have never had a proper soil test. Here's what the numbers actually mean for your fertiliser bill and your yields.",
+    excerpt: "Most Kenyan farms have never had a proper soil test. Here's what the numbers actually mean for your fertiliser bill and your yields.",
     content: `
 ## The Blind Spot in Kenyan Agriculture
 
@@ -280,14 +278,13 @@ Our agronomists sample, interpret, and write a plain-language fertiliser plan wi
     author: "Dr. Wanjiku Mwangi, Lead Agronomist",
     publishedAt: "2025-02-20",
     readTime: "10 min",
-    image: "/images/journal-soil-testing.jpg",
+    image: "/images/WhatsApp Image 2026-06-22 at 3.57.46 PM.jpeg",
     tags: ["soil testing", "fertiliser", "pH", "lime", "nutrient management", "Kenya agriculture"],
   },
   {
     slug: "greenhouse-tomato-production-kenya",
     title: "Greenhouse Tomato Production in Kenya: Varieties, Trellising, and Disease Management",
-    excerpt:
-      "From Anna F1 to Tylka F1 — how to structure a 8×24 m tunnel for 15 kg/plant, manage Tuta absoluta, and time your market.",
+    excerpt: "From Anna F1 to Tylka F1 — how to structure a 8×24 m tunnel for 15 kg/plant, manage Tuta absoluta, and time your market.",
     content: `
 ## Why Greenhouse Tomatoes?
 
@@ -429,7 +426,7 @@ We design, build, and provide 12-month agronomy support for greenhouse tomato, c
     author: "Peter Kamau, Greenhouse Specialist",
     publishedAt: "2025-03-10",
     readTime: "15 min",
-    image: "/images/journal-greenhouse-tomato.jpg",
+    image: "/images/WhatsApp Image 2026-06-22 at 5.42.45 PM (1).jpeg",
     tags: ["greenhouse", "tomato", "Anna F1", "Tuta absoluta", "fertigation", "Kenya farming"],
   },
 ];

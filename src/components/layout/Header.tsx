@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { ReededPanel } from "@/components/ui";
 import { Button } from "@/components/ui";
 
 const navItems = [
@@ -31,32 +30,34 @@ export function Header() {
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        scrolled && "reeded-glass bg-cream/35 border-b border-white/40"
+        scrolled
+          ? "glass-nav backdrop-blur-xl"
+          : "bg-transparent"
       )}
     >
       <nav className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
         <div className="flex h-16 sm:h-20 items-center justify-between">
           <Link
             href="/"
-            className="flex items-center gap-2 brutalist-border-forest px-3 py-2"
+            className="flex items-center gap-2 brutalist-border-jungle px-3 py-2 glass-card"
             aria-label="Green Africa Agri Solutions - Home"
           >
-            <span className="font-display font-bold text-xl sm:text-2xl text-forest tracking-tight-display">
+            <span className="font-display font-bold text-xl sm:text-2xl text-jungle-100 tracking-tight-display">
               GA
             </span>
-            <span className="hidden sm:block font-mono text-xs uppercase tracking-widest text-forest">
+            <span className="hidden sm:block font-mono text-xs uppercase tracking-widest text-sage-400">
               Agri Solutions
             </span>
           </Link>
 
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6">
             {navItems.map((item, index) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="relative font-mono text-sm uppercase tracking-wider text-forest hover:text-clay transition-colors after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-clay after:transition-width hover:after:w-full"
+                className="relative font-mono text-sm uppercase tracking-wider text-ink-muted hover:text-jungle-100 transition-colors after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-clay-500 after:transition-width hover:after:w-full"
               >
-                <span className="text-sage mr-2">{String(index + 1).padStart(2, "0")}</span>
+                <span className="text-sage-500 mr-2">{String(index + 1).padStart(2, "0")}</span>
                 {item.label}
               </Link>
             ))}
@@ -76,26 +77,26 @@ export function Header() {
       {mobileMenuOpen && (
         <div className="fixed inset-0 z-50 md:hidden">
           <div
-            className="absolute inset-0 bg-ink/50"
+            className="absolute inset-0 bg-jungle-900/80 backdrop-blur-sm"
             onClick={() => setMobileMenuOpen(false)}
             aria-hidden="true"
           />
-          <ReededPanel variant="dark" className="absolute top-0 right-0 bottom-0 w-full max-w-sm p-6 sm:p-8">
+          <div className="absolute top-0 right-0 bottom-0 w-full max-w-sm glass-card p-6 sm:p-8 m-4 mt-20 rounded-2xl border border-jungle-400/20">
             <div className="flex items-center justify-between mb-8">
               <Link
                 href="/"
-                className="flex items-center gap-2 brutalist-border px-3 py-2"
+                className="flex items-center gap-2 brutalist-border-jungle px-3 py-2 glass-card"
               >
-                <span className="font-display font-bold text-xl text-cream tracking-tight-display">
+                <span className="font-display font-bold text-xl text-jungle-100 tracking-tight-display">
                   GA
                 </span>
-                <span className="font-mono text-xs uppercase tracking-widest text-sage">
+                <span className="font-mono text-xs uppercase tracking-widest text-sage-400">
                   Agri Solutions
                 </span>
               </Link>
               <button
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-cream hover:text-clay transition-colors"
+                className="text-ink hover:text-clay-400 transition-colors"
                 aria-label="Close menu"
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -103,15 +104,15 @@ export function Header() {
                 </svg>
               </button>
             </div>
-            <nav className="flex flex-col gap-4" aria-label="Mobile navigation">
+            <nav className="flex flex-col gap-3" aria-label="Mobile navigation">
               {navItems.map((item, index) => (
                 <Link
                   key={item.href}
                   href={item.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="flex items-center gap-3 font-mono text-sm uppercase tracking-wider text-sage hover:text-cream transition-colors py-2"
+                  className="flex items-center gap-3 font-mono text-sm uppercase tracking-wider text-ink-muted hover:text-jungle-100 transition-colors py-3 px-4 glass rounded-lg"
                 >
-                  <span className="text-clay">{String(index + 1).padStart(2, "0")}</span>
+                  <span className="text-clay-500">{String(index + 1).padStart(2, "0")}</span>
                   {item.label}
                 </Link>
               ))}
@@ -121,7 +122,7 @@ export function Header() {
                 </Link>
               </Button>
             </nav>
-          </ReededPanel>
+          </div>
         </div>
       )}
     </header>
