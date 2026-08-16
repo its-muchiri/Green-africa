@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui";
+import { Button, Logo } from "@/components";
 
 const navItems = [
   { href: "/", label: "Home" },
@@ -39,15 +39,10 @@ export function Header() {
         <div className="flex h-16 sm:h-20 items-center justify-between">
           <Link
             href="/"
-            className="flex items-center gap-2 brutalist-border-jungle px-3 py-2 glass-card"
+            className="flex items-center"
             aria-label="Green Africa Agri Solutions - Home"
           >
-            <span className="font-display font-bold text-xl sm:text-2xl text-jungle-100 tracking-tight-display">
-              GA
-            </span>
-            <span className="hidden sm:block font-mono text-xs uppercase tracking-widest text-sage-400">
-              Agri Solutions
-            </span>
+            <Logo variant="default" size="md" asChild />
           </Link>
 
           <div className="hidden md:flex items-center gap-6">
@@ -83,16 +78,8 @@ export function Header() {
           />
           <div className="absolute top-0 right-0 bottom-0 w-full max-w-sm glass-card p-6 sm:p-8 m-4 mt-20 rounded-2xl border border-jungle-400/20">
             <div className="flex items-center justify-between mb-8">
-              <Link
-                href="/"
-                className="flex items-center gap-2 brutalist-border-jungle px-3 py-2 glass-card"
-              >
-                <span className="font-display font-bold text-xl text-jungle-100 tracking-tight-display">
-                  GA
-                </span>
-                <span className="font-mono text-xs uppercase tracking-widest text-sage-400">
-                  Agri Solutions
-                </span>
+              <Link href="/" className="flex items-center">
+                <Logo variant="default" size="md" asChild />
               </Link>
               <button
                 onClick={() => setMobileMenuOpen(false)}

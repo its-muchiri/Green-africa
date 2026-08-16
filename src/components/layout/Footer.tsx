@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { siteConfig } from "@/data/site";
-import { SectionDivider } from "@/components/ui";
+import { SectionDivider, Logo } from "@/components";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -42,13 +42,8 @@ export function Footer() {
       <div className="relative mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
           <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center gap-2 brutalist-border-jungle px-3 py-2 mb-6 inline-block glass-card" aria-label="Green Africa Agri Solutions - Home">
-              <span className="font-display font-bold text-2xl sm:text-3xl tracking-tight-display text-jungle-100">
-                GA
-              </span>
-              <span className="font-mono text-xs uppercase tracking-widest text-sage-400">
-                Agri Solutions
-              </span>
+            <Link href="/" className="flex items-center mb-6 inline-block" aria-label="Green Africa Agri Solutions - Home">
+              <Logo variant="default" size="lg" asChild />
             </Link>
             <p className="text-ink-muted max-w-xs mb-8 line-height-snug">
               Climate-smart agricultural products and services for farmers, schools, NGOs, and county governments across Kenya.
