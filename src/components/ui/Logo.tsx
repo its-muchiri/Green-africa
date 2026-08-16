@@ -28,7 +28,7 @@ export function Logo({ variant = "default", size = "md", className, asChild = fa
   const logoContent = (
     <span className={cn(
       inlineVariant,
-      "brutalist-border-jungle px-2 py-1 glass-card",
+      "premium-border-jungle px-2 py-1 glass-card",
       sizeClasses[size],
       variantClasses[variant],
       className

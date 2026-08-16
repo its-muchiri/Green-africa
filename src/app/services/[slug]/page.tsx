@@ -93,7 +93,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
                 </h2>
                 <dl className="grid sm:grid-cols-2 gap-6">
                   {service.specs.map((spec) => (
-                    <div key={spec.label} className="bg-jungle-800/50 p-6 brutalist-border-jungle glass-card">
+                    <div key={spec.label} className="bg-jungle-800/50 p-6 premium-border-jungle glass-card">
                       <dt className="font-mono text-xs uppercase tracking-widest text-sage-400 mb-2">{spec.label}</dt>
                       <dd className="font-display font-bold text-2xl sm:text-3xl text-jungle-100 tracking-tight-display">
                         {spec.value}
@@ -112,7 +112,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
                 </h2>
                 <ul className="space-y-4">
                   {service.features.map((feature, index) => (
-                    <li key={index} className="flex items-start gap-4 p-4 bg-jungle-800/50 brutalist-border-jungle glass-card">
+                    <li key={index} className="flex items-start gap-4 p-4 bg-jungle-800/50 premium-border-jungle glass-card">
                       <span className="font-display font-bold text-2xl text-clay-400 tracking-tight-display flex-shrink-0">
                         {String(index + 1).padStart(2, "0")}
                       </span>
@@ -124,7 +124,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
             </div>
 
             <aside className="lg:col-span-1 space-y-8">
-              <ReededPanel variant="dark" padding="lg" className="brutalist-border-jungle sticky top-24">
+              <ReededPanel variant="dark" padding="lg" className="premium-border-jungle sticky top-24">
                 <h3 className="font-display font-semibold text-2xl text-jungle-100 tracking-tight-display mb-6">
                   Enquire About This Service
                 </h3>
@@ -179,7 +179,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {relatedServices.map((relatedService, index) => (
-                <article key={relatedService.slug} className="group brutalist-border-jungle overflow-hidden bg-jungle-800/50 glass-card">
+                <article key={relatedService.slug} className="group premium-border-jungle overflow-hidden bg-jungle-800/50 glass-card">
                   <div className="relative aspect-[4/3] overflow-hidden">
                     <Image
                       src={relatedService.image}
@@ -220,7 +220,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
           <div className="absolute inset-0 bg-gradient-to-r from-jungle-900/90 via-jungle-800/70 to-jungle-700/50" />
         </div>
         <div className="relative mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
-          <ReededPanel variant="dark" padding="xl" className="max-w-3xl mx-auto text-center brutalist-border-jungle">
+          <ReededPanel variant="dark" padding="xl" className="max-w-3xl mx-auto text-center premium-border-jungle">
             <Eyebrow variant="numbered" number="04" className="text-clay-400">
               Ready to Proceed?
             </Eyebrow>

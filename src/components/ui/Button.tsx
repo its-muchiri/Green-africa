@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import React from "react";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "secondary" | "ghost" | "brutalist" | "brutalist-forest";
+  variant?: "primary" | "secondary" | "ghost" | "premium" | "premium-forest";
   size?: "sm" | "md" | "lg" | "xl";
   fullWidth?: boolean;
   loading?: boolean;
@@ -47,12 +47,12 @@ export function Button({
 
   const variantStyles = {
     primary:
-      "bg-clay text-cream hover:bg-clay/90 active:bg-clay/100 brutalist-border",
+      "bg-clay text-cream hover:bg-clay/90 active:bg-clay/100 rounded-xl shadow-lg shadow-clay/25",
     secondary:
-      "bg-transparent text-forest border-2 border-forest hover:bg-forest hover:text-cream brutalist-border-forest",
-    ghost: "bg-transparent text-forest hover:bg-forest/10",
-    brutalist: "bg-ink text-cream hover:bg-ink/90 brutalist-border",
-    "brutalist-forest": "bg-forest text-cream hover:bg-forest/90 brutalist-border-forest",
+      "bg-transparent text-jungle-100 border-2 border-jungle-400 hover:bg-jungle-400 hover:text-jungle-900 rounded-xl",
+    ghost: "bg-transparent text-jungle-100 hover:bg-jungle-800/50 rounded-xl",
+    premium: "bg-jungle-900 text-cream hover:bg-jungle-800 rounded-xl shadow-lg shadow-jungle-900/30",
+    "premium-forest": "bg-clay text-cream hover:bg-clay/90 rounded-xl shadow-lg shadow-clay/30",
   };
 
   const sizeStyles = {
@@ -118,7 +118,7 @@ interface LinkButtonProps {
   children: React.ReactNode;
   href: string;
   className?: string;
-  variant?: "primary" | "secondary" | "ghost" | "brutalist" | "brutalist-forest";
+  variant?: "primary" | "secondary" | "ghost" | "premium" | "premium-forest";
   size?: "sm" | "md" | "lg" | "xl";
   fullWidth?: boolean;
   target?: string;
@@ -140,12 +140,12 @@ export function LinkButton({
 
   const variantStyles = {
     primary:
-      "bg-clay text-cream hover:bg-clay/90 active:bg-clay/100 brutalist-border",
+      "bg-clay text-cream hover:bg-clay/90 active:bg-clay/100 rounded-xl shadow-lg shadow-clay/25",
     secondary:
-      "bg-transparent text-forest border-2 border-forest hover:bg-forest hover:text-cream brutalist-border-forest",
-    ghost: "bg-transparent text-forest hover:bg-forest/10",
-    brutalist: "bg-ink text-cream hover:bg-ink/90 brutalist-border",
-    "brutalist-forest": "bg-forest text-cream hover:bg-forest/90 brutalist-border-forest",
+      "bg-transparent text-jungle-100 border-2 border-jungle-400 hover:bg-jungle-400 hover:text-jungle-900 rounded-xl",
+    ghost: "bg-transparent text-jungle-100 hover:bg-jungle-800/50 rounded-xl",
+    premium: "bg-jungle-900 text-cream hover:bg-jungle-800 rounded-xl shadow-lg shadow-jungle-900/30",
+    "premium-forest": "bg-clay text-cream hover:bg-clay/90 rounded-xl shadow-lg shadow-clay/30",
   };
 
   const sizeStyles = {

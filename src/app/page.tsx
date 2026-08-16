@@ -253,7 +253,7 @@ export default function Home() {
       {/* CTA Section */}
       <section className="py-20 sm:py-28 bg-jungle-800 relative overflow-hidden noise-bg">
         <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8 relative">
-          <div className="glass-card max-w-3xl mx-auto text-center brutalist-border-jungle p-8 sm:p-12 lg:p-16">
+          <div className="glass-card max-w-3xl mx-auto text-center premium-border-jungle p-8 sm:p-12 lg:p-16">
             <Eyebrow variant="numbered" number="05" className="text-clay-400">
               Ready to Start?
             </Eyebrow>

@@ -21,8 +21,8 @@ export function Eyebrow({
       "font-mono text-xs sm:text-sm uppercase tracking-widest text-moss",
     numbered:
       "font-mono text-xs sm:text-sm uppercase tracking-widest text-moss flex items-center gap-2",
-    category:
-      "font-mono text-xs uppercase tracking-widest text-sage bg-bone px-3 py-1 brutalist-border-forest",
+category:
+      "font-mono text-xs uppercase tracking-widest text-sage-400 bg-jungle-900/50 px-3 py-1.5 premium-border-subtle",
   };
 
   return (

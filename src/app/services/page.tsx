@@ -1,4 +1,4 @@
-﻿import { Metadata } from "next";
+import { Metadata } from "next";
 import Image from "next/image";
 import { services, serviceCategories } from "@/data/services";
 import {
@@ -43,7 +43,7 @@ export default function ServicesPage() {
             <span className="text-clay-400">One integrated approach.</span>
           </h1>
           <p className="text-ink-muted max-w-prose text-lg leading-relaxed">
-            From seedling to harvest, from water source to market. Each service connects to the next — because resilient farming systems don't work in isolation.
+            From seedling to harvest, from water source to market. Each service connects to the next � because resilient farming systems don't work in isolation.
           </p>
         </div>
       </section>
@@ -52,13 +52,13 @@ export default function ServicesPage() {
       <section className="py-12 bg-jungle-900/30 border-y border-jungle-500/20">
         <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap gap-2" role="group" aria-label="Filter services by category">
-            <button className="font-mono text-xs uppercase tracking-wider text-jungle-100 bg-clay-500 px-4 py-2 brutalist-border-jungle" aria-pressed="true">
+            <button className="font-mono text-xs uppercase tracking-wider text-jungle-100 bg-clay-500 px-4 py-2 premium-border-jungle" aria-pressed="true">
               All Services
             </button>
             {serviceCategories.map((cat) => (
               <button
                 key={cat.value}
-                className="font-mono text-xs uppercase tracking-wider text-sage-400 bg-jungle-800/50 px-4 py-2 brutalist-border-jungle hover:bg-jungle-700 hover:text-jungle-100 transition-all"
+                className="font-mono text-xs uppercase tracking-wider text-sage-400 bg-jungle-800/50 px-4 py-2 premium-border-jungle hover:bg-jungle-700 hover:text-jungle-100 transition-all"
                 aria-pressed="false"
               >
                 {cat.label}
@@ -73,7 +73,7 @@ export default function ServicesPage() {
         <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <article key={service.slug} className="group brutalist-border-jungle overflow-hidden bg-jungle-800/50 flex flex-col glass-card">
+              <article key={service.slug} className="group premium-border-jungle overflow-hidden bg-jungle-800/50 flex flex-col glass-card">
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
                     src={service.image}
@@ -93,13 +93,13 @@ export default function ServicesPage() {
                   <p className="mt-4 text-ink-muted leading-relaxed flex-1">{service.shortDescription}</p>
                   <div className="mt-6 flex flex-wrap gap-2">
                     {service.features.slice(0, 2).map((feature, i) => (
-                      <span key={i} className="font-mono text-xs text-sage-400 bg-jungle-900/50 px-3 py-1.5 brutalist-border-jungle">
+                      <span key={i} className="font-mono text-xs text-sage-400 bg-jungle-900/50 px-3 py-1.5 premium-border-jungle">
                         {feature}
                       </span>
                     ))}
                   </div>
                   <LinkButton href={`/services/${service.slug}`} variant="secondary" className="mt-8" size="sm" fullWidth>
-                    View Details →
+                    View Details ?
                   </LinkButton>
                 </div>
               </article>
@@ -123,7 +123,7 @@ export default function ServicesPage() {
           <div className="absolute inset-0 bg-gradient-to-r from-jungle-900/90 via-jungle-800/70 to-jungle-700/50" />
         </div>
         <div className="relative mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
-          <ReededPanel variant="dark" padding="xl" className="max-w-3xl mx-auto text-center brutalist-border-jungle">
+          <ReededPanel variant="dark" padding="xl" className="max-w-3xl mx-auto text-center premium-border-jungle">
             <Eyebrow variant="numbered" number="02" className="text-clay-400">
               Need Help Choosing?
             </Eyebrow>
@@ -131,7 +131,7 @@ export default function ServicesPage() {
               Tell us your situation. We'll recommend the right mix.
             </h2>
             <p className="text-ink-muted max-w-prose mx-auto mb-8 text-lg leading-relaxed">
-              Land size, crops, water source, budget, timeline — we factor it all in.
+              Land size, crops, water source, budget, timeline � we factor it all in.
             </p>
             <Button size="xl" asChild>
               <a href="/contact">Get a Recommendation</a>

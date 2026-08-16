@@ -84,7 +84,7 @@ export default async function JournalPostPage({ params }: JournalPostPageProps) 
           <div className="grid lg:grid-cols-4 gap-12 lg:gap-16">
             <aside className="lg:col-span-1 space-y-8">
               <div className="sticky top-24 space-y-6">
-                <div className="bg-jungle-800/50 p-6 brutalist-border-jungle glass-card">
+                <div className="bg-jungle-800/50 p-6 premium-border-jungle glass-card">
                   <h3 className="font-display font-semibold text-lg text-jungle-100 tracking-tight-display mb-4">Share This</h3>
                   <div className="flex gap-3">
                     <a href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(`https://greenafrica.co.ke/journal/${post.slug}`)}`} target="_blank" rel="noopener noreferrer" className="text-sage-400 hover:text-clay-400 transition-colors" aria-label="Share on Twitter">
@@ -102,18 +102,18 @@ export default async function JournalPostPage({ params }: JournalPostPageProps) 
                   </div>
                 </div>
 
-                <div className="bg-jungle-800/50 p-6 brutalist-border-jungle glass-card">
+                <div className="bg-jungle-800/50 p-6 premium-border-jungle glass-card">
                   <h3 className="font-display font-semibold text-lg text-jungle-100 tracking-tight-display mb-4">Tags</h3>
                   <div className="flex flex-wrap gap-2">
                     {post.tags.map((tag, i) => (
-                      <span key={i} className="font-mono text-xs text-sage-400 bg-jungle-900/50 px-3 py-1.5 brutalist-border-jungle">
+                      <span key={i} className="font-mono text-xs text-sage-400 bg-jungle-900/50 px-3 py-1.5 premium-border-subtle">
                         {tag}
                       </span>
                     ))}
                   </div>
                 </div>
 
-                <div className="bg-jungle-800/50 p-6 brutalist-border-jungle glass-card">
+                <div className="bg-jungle-800/50 p-6 premium-border-jungle glass-card">
                   <h3 className="font-display font-semibold text-lg text-jungle-100 tracking-tight-display mb-4">Related Posts</h3>
                   <ul className="space-y-3">
                     {journalPosts.filter(p => p.slug !== post.slug && p.category === post.category).slice(0, 3).map((related) => (
@@ -128,7 +128,7 @@ export default async function JournalPostPage({ params }: JournalPostPageProps) 
 
             <div className="lg:col-span-3">
               <div className="prose prose-cream max-w-none">
-                <div className="relative aspect-[16/9] mb-12 overflow-hidden brutalist-border-jungle">
+                <div className="relative aspect-[16/9] mb-12 overflow-hidden premium-border-jungle">
                   <Image
                     src={post.image}
                     alt={post.title}
@@ -144,10 +144,10 @@ export default async function JournalPostPage({ params }: JournalPostPageProps) 
 
                 <SectionDivider variant="dark" className="my-12" />
 
-                <div className="bg-jungle-800/50 p-8 brutalist-border-jungle glass-card">
+                <div className="bg-jungle-800/50 p-8 premium-border-jungle glass-card">
                   <h3 className="font-display font-semibold text-xl text-jungle-100 tracking-tight-display mb-4">About the Author</h3>
                   <div className="flex items-start gap-4">
-                    <div className="w-16 h-16 rounded-full bg-jungle-700/50 flex items-center justify-center flex-shrink-0 brutalist-border-jungle">
+                    <div className="w-16 h-16 rounded-full bg-jungle-700/50 flex items-center justify-center flex-shrink-0 premium-border-jungle">
                       <span className="font-display font-bold text-2xl text-clay-400">{post.author.split(" ").map(n => n[0]).join("")}</span>
                     </div>
                     <div>

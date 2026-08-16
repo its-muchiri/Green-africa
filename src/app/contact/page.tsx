@@ -1,4 +1,4 @@
-﻿import { Metadata } from "next";
+import { Metadata } from "next";
 import Image from "next/image";
 import { siteConfig } from "@/data/site";
 import { services } from "@/data/services";
@@ -213,7 +213,7 @@ export default function ContactPage() {
 
             {/* Contact Info */}
             <div>
-              <ReededPanel variant="dark" padding="xl" className="brutalist-border-jungle h-fit sticky top-24">
+              <ReededPanel variant="dark" padding="xl" className="premium-border-jungle h-fit sticky top-24">
                 <Eyebrow variant="numbered" number="03" className="text-clay-400">
                   Get in Touch
                 </Eyebrow>
@@ -305,7 +305,7 @@ export default function ContactPage() {
               Mpaka House, Westlands Road.
             </h2>
           </div>
-          <div className="aspect-video brutalist-border overflow-hidden glass-card">
+          <div className="aspect-video premium-border overflow-hidden glass-card">
             <iframe
               src={siteConfig.mapEmbedUrl}
               width="100%"
@@ -353,7 +353,7 @@ export default function ContactPage() {
               { q: "What warranty do you provide?", a: "Greenhouse structures: 1 year workmanship, 3 years polythene, 10 years galvanized steel. Solar pumps: 2 years manufacturer warranty. HDPE liners: 20 years buried. All with Nairobi-based spares support." },
               { q: "How do I get a soil test done?", a: "Contact us to schedule sampling. Our agronomist visits your farm, collects geo-referenced samples (1 per hectare minimum), sends to CropNuts/KALRO. Results with fertiliser prescription returned in 7 days. Cost: KSh 3,500/sample." },
             ].map((faq, index) => (
-              <details key={index} className="group glass-card brutalist-border-jungle">
+              <details key={index} className="group glass-card premium-border-jungle">
                 <summary className="flex items-center justify-between cursor-pointer list-none font-display font-semibold text-xl text-jungle-100 tracking-tight-display p-6">
                   {faq.q}
                   <svg className="w-5 h-5 text-clay-400 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">

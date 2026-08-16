@@ -242,16 +242,22 @@
     border-radius: 0;
   }
 
-  .brutalist-border {
-    border: 2px solid var(--clay-500);
-    border-radius: 0;
-    box-shadow: 4px 4px 0 var(--clay-500);
+  .premium-border {
+    border: 1px solid var(--clay-300);
+    border-radius: 1rem;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
   }
 
-  .brutalist-border-jungle {
-    border: 2px solid var(--jungle-300);
-    border-radius: 0;
-    box-shadow: 4px 4px 0 var(--jungle-300);
+  .premium-border-jungle {
+    border: 1px solid var(--jungle-400);
+    border-radius: 1rem;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  }
+
+  .premium-border-subtle {
+    border: 1px solid var(--jungle-500);
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   }
 
   .hairline-divider {

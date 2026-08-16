@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import Image from "next/image";
 import { Metadata } from "next";
 import { team, companyTimeline, siteConfig } from "@/data/site";
@@ -13,7 +13,7 @@ import {
 
 export const metadata: Metadata = {
   title: "About Us | Green Africa Agri Solutions",
-  description: "Learn about Green Africa Agri Solutions — our story, mission, team, and timeline. Nairobi-based supplier of climate-smart agricultural products and services since 2018.",
+  description: "Learn about Green Africa Agri Solutions � our story, mission, team, and timeline. Nairobi-based supplier of climate-smart agricultural products and services since 2018.",
 };
 
 export default function AboutPage() {
@@ -63,10 +63,10 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-6 text-ink-muted leading-relaxed">
                 <p>
-                  Kenya's smallholders face a triple threat: erratic rainfall, degrading soils, and rising input costs. Yet most "solutions" sold to them are imported, overpriced, and poorly supported — designed for European greenhouses, not Kenyan shambas.
+                  Kenya's smallholders face a triple threat: erratic rainfall, degrading soils, and rising input costs. Yet most "solutions" sold to them are imported, overpriced, and poorly supported � designed for European greenhouses, not Kenyan shambas.
                 </p>
                 <p>
-                  Green Africa Agri Solutions was founded to change that. We design, supply, and install systems built for Kenyan conditions: solar-powered irrigation that runs on equatorial sun, greenhouses that withstand Rift Valley winds, seedling varieties selected for local disease pressure, and training delivered in the field — not a hotel conference room.
+                  Green Africa Agri Solutions was founded to change that. We design, supply, and install systems built for Kenyan conditions: solar-powered irrigation that runs on equatorial sun, greenhouses that withstand Rift Valley winds, seedling varieties selected for local disease pressure, and training delivered in the field � not a hotel conference room.
                 </p>
                 <p>
                   We're not an NGO. We're a commercial enterprise that measures success by our clients' yields and income. When a farmer in Kajiado doubles her tomato yield with drip irrigation, or a school in Machakos feeds 400 children from a kitchen garden we designed, that's the metric that matters.
@@ -104,7 +104,7 @@ export default function AboutPage() {
             <ol className="space-y-8">
               {companyTimeline.map((item, index) => (
                 <li key={item.year} className="relative pl-12 sm:pl-16 border-l-2 border-jungle-500/30">
-                  <div className="absolute left-0 top-0 -translate-x-1/2 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-clay-500 flex items-center justify-center brutalist-border z-10">
+                  <div className="absolute left-0 top-0 -translate-x-1/2 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-clay-500 flex items-center justify-center premium-border z-10">
                     <span className="font-display font-bold text-jungle-900 text-lg sm:text-xl">{String(index + 1).padStart(2, "0")}</span>
                   </div>
                   <div className="glass-card">
@@ -186,7 +186,7 @@ export default function AboutPage() {
             <ValueCard
               number="03"
               title="Training Included"
-              description="Every installation comes with operator training and 6-month WhatsApp support. We don't just hand over keys — we transfer capability."
+              description="Every installation comes with operator training and 6-month WhatsApp support. We don't just hand over keys � we transfer capability."
             />
             <ValueCard
               number="04"
@@ -200,7 +200,7 @@ export default function AboutPage() {
       {/* CTA */}
       <section className="py-20 sm:py-28 bg-jungle-900/30">
         <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8 text-center">
-          <div className="glass-card max-w-3xl mx-auto brutalist-border-jungle p-8 sm:p-12 lg:p-16">
+          <div className="glass-card max-w-3xl mx-auto premium-border-jungle p-8 sm:p-12 lg:p-16">
             <Eyebrow variant="numbered" number="06" className="text-clay-400">
               Let's Talk
             </Eyebrow>
@@ -227,7 +227,7 @@ export default function AboutPage() {
 
 function ValueCard({ number, title, description }: { number: string; title: string; description: string }) {
   return (
-    <div className="glass-card brutalist-border-jungle">
+    <div className="glass-card premium-border-jungle">
       <div className="font-display font-bold text-4xl text-clay-400 tracking-tight-display mb-4">{number}</div>
       <h3 className="font-display font-semibold text-xl text-jungle-100 tracking-tight-display mb-3">{title}</h3>
       <p className="text-ink-muted leading-relaxed">{description}</p>

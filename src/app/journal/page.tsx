@@ -1,4 +1,4 @@
-ï»¿import { Metadata } from "next";
+import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { journalPosts, getPostsByCategory } from "@/data/posts";
@@ -11,7 +11,7 @@ import {
 
 export const metadata: Metadata = {
   title: "Field Notes | Practical Agronomy Guides & Seasonal Advice",
-  description: "Real agronomy guides, seasonal advice, and project learnings from our team and partner farms. Not SEO filler â€” practical knowledge for Kenyan growers.",
+  description: "Real agronomy guides, seasonal advice, and project learnings from our team and partner farms. Not SEO filler — practical knowledge for Kenyan growers.",
 };
 
 export default function JournalPage() {
@@ -53,13 +53,13 @@ export default function JournalPage() {
       <section className="py-12 bg-jungle-900/30 border-y border-jungle-500/20">
         <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap gap-2" role="group" aria-label="Filter posts by category">
-            <button className="font-mono text-xs uppercase tracking-wider text-jungle-100 bg-clay-500 px-4 py-2 brutalist-border-jungle" aria-pressed="true">
+            <button className="font-mono text-xs uppercase tracking-wider text-jungle-100 bg-clay-500 px-4 py-2 premium-border-jungle" aria-pressed="true">
               All Posts
             </button>
             {categories.map((cat) => (
               <button
                 key={cat}
-                className="font-mono text-xs uppercase tracking-wider text-sage-400 bg-jungle-800/50 px-4 py-2 brutalist-border-jungle hover:bg-jungle-700 hover:text-jungle-100 transition-all"
+                className="font-mono text-xs uppercase tracking-wider text-sage-400 bg-jungle-800/50 px-4 py-2 premium-border-jungle hover:bg-jungle-700 hover:text-jungle-100 transition-all"
                 aria-pressed="false"
               >
                 {cat}
@@ -74,7 +74,7 @@ export default function JournalPage() {
         <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {journalPosts.map((post) => (
-              <article key={post.slug} className="group brutalist-border-jungle overflow-hidden bg-jungle-800/50 flex flex-col glass-card">
+              <article key={post.slug} className="group premium-border-jungle overflow-hidden bg-jungle-800/50 flex flex-col glass-card">
                 <div className="relative aspect-[16/10] overflow-hidden">
                   <Image
                     src={post.image}
@@ -86,7 +86,7 @@ export default function JournalPage() {
                     blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAn/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABMx/9k="
                   />
                   <div className="absolute top-4 left-4">
-                    <span className="font-mono text-xs uppercase tracking-wider text-sage-400 bg-jungle-900/80 px-3 py-1.5 brutalist-border-jungle backdrop-blur-sm">
+                    <span className="font-mono text-xs uppercase tracking-wider text-sage-400 bg-jungle-900/80 px-3 py-1.5 premium-border-jungle backdrop-blur-sm">
                       {post.category}
                     </span>
                   </div>
@@ -94,9 +94,9 @@ export default function JournalPage() {
                 <div className="p-6 sm:p-8 flex-1 flex flex-col">
                   <div className="flex flex-wrap items-center gap-2 font-mono text-xs text-sage-400 mb-3">
                     <time dateTime={post.publishedAt}>{new Date(post.publishedAt).toLocaleDateString("en-KE", { month: "short", day: "numeric", year: "numeric" })}</time>
-                    <span>â€¢</span>
+                    <span>•</span>
                     <span>{post.readTime}</span>
-                    <span>â€¢</span>
+                    <span>•</span>
                     <span>{post.author}</span>
                   </div>
                   <Link href={`/journal/${post.slug}`} className="block mb-4">
@@ -107,7 +107,7 @@ export default function JournalPage() {
                   <p className="text-ink-muted leading-relaxed flex-1 mb-4 line-clamp-3">{post.excerpt}</p>
                   <div className="flex flex-wrap gap-2 mb-6">
                     {post.tags.slice(0, 3).map((tag, i) => (
-                      <span key={i} className="font-mono text-xs text-sage-400 bg-jungle-900/50 px-3 py-1.5 brutalist-border-jungle">
+                      <span key={i} className="font-mono text-xs text-sage-400 bg-jungle-900/50 px-3 py-1.5 premium-border-jungle">
                         {tag}
                       </span>
                     ))}

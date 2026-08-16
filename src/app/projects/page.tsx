@@ -1,4 +1,4 @@
-﻿import { Metadata } from "next";
+import { Metadata } from "next";
 import Image from "next/image";
 import { projects } from "@/data/projects";
 import {
@@ -52,13 +52,13 @@ export default function ProjectsPage() {
       <section className="py-12 bg-jungle-900/30 border-y border-jungle-500/20">
         <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap gap-2" role="group" aria-label="Filter projects by category">
-            <button className="font-mono text-xs uppercase tracking-wider text-jungle-100 bg-clay-500 px-4 py-2 brutalist-border-jungle" aria-pressed="true">
+            <button className="font-mono text-xs uppercase tracking-wider text-jungle-100 bg-clay-500 px-4 py-2 premium-border-jungle" aria-pressed="true">
               All Projects
             </button>
             {categories.map((cat) => (
               <button
                 key={cat}
-                className="font-mono text-xs uppercase tracking-wider text-sage-400 bg-jungle-800/50 px-4 py-2 brutalist-border-jungle hover:bg-jungle-700 hover:text-jungle-100 transition-all"
+                className="font-mono text-xs uppercase tracking-wider text-sage-400 bg-jungle-800/50 px-4 py-2 premium-border-jungle hover:bg-jungle-700 hover:text-jungle-100 transition-all"
                 aria-pressed="false"
               >
                 {cat}
@@ -73,7 +73,7 @@ export default function ProjectsPage() {
         <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
-              <article key={project.slug} className="group brutalist-border-jungle overflow-hidden bg-jungle-800/50 flex flex-col glass-card">
+              <article key={project.slug} className="group premium-border-jungle overflow-hidden bg-jungle-800/50 flex flex-col glass-card">
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
                     src={project.images[0]}
@@ -85,7 +85,7 @@ export default function ProjectsPage() {
                     blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAn/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABMx/9k="
                   />
                   <div className="absolute top-4 left-4">
-                    <span className="font-mono text-xs uppercase tracking-wider text-sage-400 bg-jungle-900/80 px-3 py-1.5 brutalist-border-jungle backdrop-blur-sm">
+                    <span className="font-mono text-xs uppercase tracking-wider text-sage-400 bg-jungle-900/80 px-3 py-1.5 premium-border-jungle backdrop-blur-sm">
                       {project.category}
                     </span>
                   </div>
@@ -98,12 +98,12 @@ export default function ProjectsPage() {
                   <p className="text-ink-muted leading-relaxed flex-1 line-clamp-3">{project.description}</p>
                   <div className="mt-6 flex flex-wrap gap-2">
                     {project.services.slice(0, 3).map((service, i) => (
-                      <span key={i} className="font-mono text-xs text-sage-400 bg-jungle-900/50 px-3 py-1.5 brutalist-border-jungle">
+                      <span key={i} className="font-mono text-xs text-sage-400 bg-jungle-900/50 px-3 py-1.5 premium-border-jungle">
                         {service}
                       </span>
                     ))}
                     {project.services.length > 3 && (
-                      <span className="font-mono text-xs text-sage-400 bg-jungle-900/50 px-3 py-1.5 brutalist-border-jungle">
+                      <span className="font-mono text-xs text-sage-400 bg-jungle-900/50 px-3 py-1.5 premium-border-jungle">
                         +{project.services.length - 3} more
                       </span>
                     )}
@@ -112,7 +112,7 @@ export default function ProjectsPage() {
                     <time className="font-mono text-xs text-sage-400" dateTime={project.completedAt}>
                       Completed {new Date(project.completedAt).toLocaleDateString("en-KE", { month: "short", year: "numeric" })}
                     </time>
-                    <span className="font-mono text-xs uppercase tracking-wider text-sage-400 bg-jungle-900/50 px-3 py-1 brutalist-border-jungle capitalize">
+                    <span className="font-mono text-xs uppercase tracking-wider text-sage-400 bg-jungle-900/50 px-3 py-1 premium-border-jungle capitalize">
                       {project.clientType}
                     </span>
                   </div>
@@ -149,7 +149,7 @@ export default function ProjectsPage() {
               We&apos;ll survey your site, design the system, and give you a complete specification with costs and timeline.
             </p>
             <Button size="xl" asChild>
-              <a href="/contact">Get a Quote →</a>
+              <a href="/contact">Get a Quote ?</a>
             </Button>
           </div>
         </div>
