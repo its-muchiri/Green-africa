@@ -3,6 +3,8 @@ import { services } from "@/data/services";
 import { journalPosts } from "@/data/posts";
 import { projects } from "@/data/projects";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://greenafrica.co.ke";
   const currentDate = new Date();
