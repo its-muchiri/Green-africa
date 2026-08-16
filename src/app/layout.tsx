@@ -3,7 +3,6 @@ import localFont from "next/font/local";
 import { Header } from "@/components/layout";
 import { Footer } from "@/components/layout";
 import "./globals.css";
-import "./glass.css";
 
 const funnelDisplay = localFont({
   src: [
