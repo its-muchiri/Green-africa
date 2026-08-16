@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+﻿import { Metadata } from "next";
 import { team, companyTimeline, siteConfig } from "@/data/site";
 import {
   ReededPanel,
@@ -11,7 +11,7 @@ import {
 
 export const metadata: Metadata = {
   title: "About Us | Green Africa Agri Solutions",
-  description: "Learn about Green Africa Agri Solutions — our story, mission, team, and timeline. Nairobi-based supplier of climate-smart agricultural products and services since 2018.",
+  description: "Learn about Green Africa Agri Solutions â€” our story, mission, team, and timeline. Nairobi-based supplier of climate-smart agricultural products and services since 2018.",
 };
 
 export default function AboutPage() {
@@ -19,7 +19,7 @@ export default function AboutPage() {
     <>
       {/* Hero */}
       <section className="relative min-h-[60vh] flex items-center bg-forest">
-        <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-5" aria-hidden="true" />
+        <div className="absolute inset-0 bg-noise opacity-5" aria-hidden="true" />
         <div className="relative mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
           <Eyebrow variant="numbered" number="01" className="text-clay">
             About Us
@@ -48,10 +48,10 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-6 text-ink/80 leading-relaxed">
                 <p>
-                  Kenya's smallholders face a triple threat: erratic rainfall, degrading soils, and rising input costs. Yet most "solutions" sold to them are imported, overpriced, and poorly supported — designed for European greenhouses, not Kenyan shambas.
+                  Kenya's smallholders face a triple threat: erratic rainfall, degrading soils, and rising input costs. Yet most "solutions" sold to them are imported, overpriced, and poorly supported â€” designed for European greenhouses, not Kenyan shambas.
                 </p>
                 <p>
-                  Green Africa Agri Solutions was founded to change that. We design, supply, and install systems built for Kenyan conditions: solar-powered irrigation that runs on equatorial sun, greenhouses that withstand Rift Valley winds, seedling varieties selected for local disease pressure, and training delivered in the field — not a hotel conference room.
+                  Green Africa Agri Solutions was founded to change that. We design, supply, and install systems built for Kenyan conditions: solar-powered irrigation that runs on equatorial sun, greenhouses that withstand Rift Valley winds, seedling varieties selected for local disease pressure, and training delivered in the field â€” not a hotel conference room.
                 </p>
                 <p>
                   We're not an NGO. We're a commercial enterprise that measures success by our clients' yields and income. When a farmer in Kajiado doubles her tomato yield with drip irrigation, or a school in Machakos feeds 400 children from a kitchen garden we designed, that's the metric that matters.
@@ -69,7 +69,7 @@ export default function AboutPage() {
 
       {/* Timeline */}
       <section className="py-20 sm:py-28 bg-forest relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-5" aria-hidden="true" />
+        <div className="absolute inset-0 bg-noise opacity-5" aria-hidden="true" />
         <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-16">
             <Eyebrow variant="numbered" number="03" className="text-clay">
@@ -135,7 +135,7 @@ export default function AboutPage() {
 
       {/* Values */}
       <section className="py-20 sm:py-28 bg-forest relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-5" aria-hidden="true" />
+        <div className="absolute inset-0 bg-noise opacity-5" aria-hidden="true" />
         <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-16">
             <Eyebrow variant="numbered" number="05" className="text-clay">
@@ -160,7 +160,7 @@ export default function AboutPage() {
             <ValueCard
               number="03"
               title="Training Included"
-              description="Every installation comes with operator training and 6-month WhatsApp support. We don't just hand over keys — we transfer capability."
+              description="Every installation comes with operator training and 6-month WhatsApp support. We don't just hand over keys â€” we transfer capability."
             />
             <ValueCard
               number="04"

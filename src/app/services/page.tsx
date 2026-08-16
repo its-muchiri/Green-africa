@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+﻿import { Metadata } from "next";
 import { services, serviceCategories } from "@/data/services";
 import {
   ReededPanel,
@@ -19,7 +19,7 @@ export default function ServicesPage() {
     <>
       {/* Hero */}
       <section className="relative min-h-[60vh] flex items-center bg-forest">
-        <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-5" aria-hidden="true" />
+        <div className="absolute inset-0 bg-noise opacity-5" aria-hidden="true" />
         <div className="relative mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
           <Eyebrow variant="numbered" number="01" className="text-clay">
             Our Services
@@ -30,7 +30,7 @@ export default function ServicesPage() {
             <span className="text-clay">One integrated approach.</span>
           </h1>
           <p className="text-sage max-w-prose text-lg leading-relaxed">
-            From seedling to harvest, from water source to market. Each service connects to the next — because resilient farming systems don't work in isolation.
+            From seedling to harvest, from water source to market. Each service connects to the next â€” because resilient farming systems don't work in isolation.
           </p>
         </div>
       </section>
@@ -80,7 +80,7 @@ export default function ServicesPage() {
                     ))}
                   </div>
                   <LinkButton href={`/services/${service.slug}`} variant="secondary" className="mt-8" size="sm" fullWidth>
-                    View Details →
+                    View Details â†’
                   </LinkButton>
                 </div>
               </article>
@@ -91,7 +91,7 @@ export default function ServicesPage() {
 
       {/* CTA */}
       <section className="py-20 sm:py-28 bg-forest relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-5" aria-hidden="true" />
+        <div className="absolute inset-0 bg-noise opacity-5" aria-hidden="true" />
         <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8 relative">
           <ReededPanel variant="dark" padding="xl" className="max-w-3xl mx-auto text-center brutalist-border">
             <Eyebrow variant="numbered" number="02" className="text-clay">
@@ -101,7 +101,7 @@ export default function ServicesPage() {
               Tell us your situation. We'll recommend the right mix.
             </h2>
             <p className="text-sage max-w-prose mx-auto mb-8 text-lg leading-relaxed">
-              Land size, crops, water source, budget, timeline — we factor it all in.
+              Land size, crops, water source, budget, timeline â€” we factor it all in.
             </p>
             <Button size="xl" asChild>
               <a href="/contact">Get a Recommendation</a>

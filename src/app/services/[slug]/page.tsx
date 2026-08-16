@@ -48,7 +48,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
     <>
       {/* Hero */}
       <section className="relative min-h-[60vh] flex items-center bg-forest">
-        <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-5" aria-hidden="true" />
+        <div className="bg-noise opacity-5" aria-hidden="true" />
         <div className="relative mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <Eyebrow variant="category" className="text-clay">{category?.label}</Eyebrow>
@@ -187,8 +187,8 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
       )}
 
       {/* CTA */}
-      <section className="py-20 sm:py-28 bg-forest relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-5" aria-hidden="true" />
+      <section className="py-20 sm:py-28 bg-forest relative overflow-hidden noise-bg">
+        <div className="bg-noise opacity-5" aria-hidden="true" />
         <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8 relative">
           <ReededPanel variant="dark" padding="xl" className="max-w-3xl mx-auto text-center brutalist-border">
             <Eyebrow variant="numbered" number="04" className="text-clay">

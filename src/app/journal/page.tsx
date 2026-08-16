@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+﻿import { Metadata } from "next";
 import Link from "next/link";
 import { journalPosts, getPostsByCategory } from "@/data/posts";
 import {
@@ -10,7 +10,7 @@ import {
 
 export const metadata: Metadata = {
   title: "Field Notes | Practical Agronomy Guides & Seasonal Advice",
-  description: "Real agronomy guides, seasonal advice, and project learnings from our team and partner farms. Not SEO filler — practical knowledge for Kenyan growers.",
+  description: "Real agronomy guides, seasonal advice, and project learnings from our team and partner farms. Not SEO filler â€” practical knowledge for Kenyan growers.",
 };
 
 export default function JournalPage() {
@@ -20,7 +20,7 @@ export default function JournalPage() {
     <>
       {/* Hero */}
       <section className="relative min-h-[60vh] flex items-center bg-forest">
-        <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-5" aria-hidden="true" />
+        <div className="absolute inset-0 bg-noise opacity-5" aria-hidden="true" />
         <div className="relative mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
           <Eyebrow variant="numbered" number="01" className="text-clay">
             Field Notes
@@ -75,9 +75,9 @@ export default function JournalPage() {
                 <div className="p-6 sm:p-8 flex-1 flex flex-col">
                   <div className="flex flex-wrap items-center gap-2 font-mono text-xs text-sage mb-3">
                     <time dateTime={post.publishedAt}>{new Date(post.publishedAt).toLocaleDateString("en-KE", { month: "short", day: "numeric", year: "numeric" })}</time>
-                    <span>•</span>
+                    <span>â€¢</span>
                     <span>{post.readTime}</span>
-                    <span>•</span>
+                    <span>â€¢</span>
                     <span>{post.author}</span>
                   </div>
                   <Link href={`/journal/${post.slug}`} className="block mb-4">
@@ -108,7 +108,7 @@ export default function JournalPage() {
 
       {/* Newsletter CTA */}
       <section className="py-20 sm:py-28 bg-forest relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-5" aria-hidden="true" />
+        <div className="absolute inset-0 bg-noise opacity-5" aria-hidden="true" />
         <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-3xl mx-auto text-center">
             <Eyebrow variant="numbered" number="02" className="text-clay">

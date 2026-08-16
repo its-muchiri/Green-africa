@@ -19,7 +19,7 @@ export default function ContactPage() {
     <>
       {/* Hero */}
       <section className="relative min-h-[50vh] flex items-center bg-forest">
-        <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-5" aria-hidden="true" />
+        <div className="absolute inset-0 bg-noise opacity-5" aria-hidden="true" />
         <div className="relative mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
           <Eyebrow variant="numbered" number="01" className="text-clay">
             Contact Us
@@ -258,7 +258,7 @@ export default function ContactPage() {
 
       {/* Map */}
       <section className="py-20 sm:py-28 bg-forest relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-5" aria-hidden="true" />
+        <div className="absolute inset-0 bg-noise opacity-5" aria-hidden="true" />
         <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-10">
             <Eyebrow variant="numbered" number="04" className="text-clay">
@@ -320,6 +320,7 @@ export default function ContactPage() {
     </>
   );
 }
+
 
 
 

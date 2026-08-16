@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+﻿import { Metadata } from "next";
 import { projects } from "@/data/projects";
 import {
   Eyebrow,
@@ -18,7 +18,7 @@ export default function ProjectsPage() {
     <>
       {/* Hero */}
       <section className="relative min-h-[60vh] flex items-center bg-forest">
-        <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-5" aria-hidden="true" />
+        <div className="absolute inset-0 bg-noise opacity-5" aria-hidden="true" />
         <div className="relative mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
           <Eyebrow variant="numbered" number="01" className="text-clay">
             Our Work
@@ -105,7 +105,7 @@ export default function ProjectsPage() {
 
       {/* CTA */}
       <section className="py-20 sm:py-28 bg-forest relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-5" aria-hidden="true" />
+        <div className="absolute inset-0 bg-noise opacity-5" aria-hidden="true" />
         <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-3xl mx-auto text-center">
             <Eyebrow variant="numbered" number="02" className="text-clay">
@@ -118,7 +118,7 @@ export default function ProjectsPage() {
               We'll survey your site, design the system, and give you a complete specification with costs and timeline.
             </p>
             <LinkButton href="/contact" variant="primary" size="xl">
-              Get a Quote →
+              Get a Quote â†’
             </LinkButton>
           </div>
         </div>

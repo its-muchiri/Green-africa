@@ -42,10 +42,10 @@ export default async function JournalPostPage({ params }: JournalPostPageProps) 
   if (!post) notFound();
 
   return (
-    <article className="bg-cream">
+    <article className="bg-jungle-900">
       {/* Hero */}
       <section className="relative min-h-[50vh] flex items-end bg-forest">
-        <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-5" aria-hidden="true" />
+        <div className="bg-noise opacity-5" aria-hidden="true" />
         <div className="relative mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8 pb-16">
           <div className="max-w-4xl">
             <div className="flex flex-wrap items-center gap-2 font-mono text-xs text-sage mb-4">
@@ -144,8 +144,8 @@ export default async function JournalPostPage({ params }: JournalPostPageProps) 
       </section>
 
       {/* Newsletter CTA */}
-      <section className="py-20 sm:py-28 bg-forest relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-5" aria-hidden="true" />
+      <section className="py-20 sm:py-28 bg-forest relative overflow-hidden noise-bg">
+        <div className="bg-noise opacity-5" aria-hidden="true" />
         <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-3xl mx-auto text-center">
             <Eyebrow variant="numbered" number="03" className="text-clay">
