@@ -11,7 +11,7 @@ import {
 
 export const metadata: Metadata = {
   title: "Field Notes | Practical Agronomy Guides & Seasonal Advice",
-  description: "Real agronomy guides, seasonal advice, and project learnings from our team and partner farms. Not SEO filler — practical knowledge for Kenyan growers.",
+  description: "Real agronomy guides, seasonal advice, and project learnings from our team and partner farms. Not SEO filler â€” practical knowledge for Kenyan growers.",
 };
 
 export default function JournalPage() {
@@ -94,9 +94,9 @@ export default function JournalPage() {
                 <div className="p-6 sm:p-8 flex-1 flex flex-col">
                   <div className="flex flex-wrap items-center gap-2 font-mono text-xs text-sage-400 mb-3">
                     <time dateTime={post.publishedAt}>{new Date(post.publishedAt).toLocaleDateString("en-KE", { month: "short", day: "numeric", year: "numeric" })}</time>
-                    <span>•</span>
+                    <span>â€¢</span>
                     <span>{post.readTime}</span>
-                    <span>•</span>
+                    <span>â€¢</span>
                     <span>{post.author}</span>
                   </div>
                   <Link href={`/journal/${post.slug}`} className="block mb-4">

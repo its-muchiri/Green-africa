@@ -43,7 +43,7 @@ export default function ServicesPage() {
             <span className="text-clay-400">One integrated approach.</span>
           </h1>
           <p className="text-ink-muted max-w-prose text-lg leading-relaxed">
-            From seedling to harvest, from water source to market. Each service connects to the next — because resilient farming systems don't work in isolation.
+            From seedling to harvest, from water source to market. Each service connects to the next â€” because resilient farming systems don't work in isolation.
           </p>
         </div>
       </section>
@@ -99,7 +99,7 @@ export default function ServicesPage() {
                     ))}
                   </div>
                   <LinkButton href={`/services/${service.slug}`} variant="secondary" className="mt-8" size="sm" fullWidth>
-                    View Details ?
+                    View Details â†’
                   </LinkButton>
                 </div>
               </article>
@@ -131,7 +131,7 @@ export default function ServicesPage() {
               Tell us your situation. We'll recommend the right mix.
             </h2>
             <p className="text-ink-muted max-w-prose mx-auto mb-8 text-lg leading-relaxed">
-              Land size, crops, water source, budget, timeline — we factor it all in.
+              Land size, crops, water source, budget, timeline â€” we factor it all in.
             </p>
             <Button size="xl" asChild>
               <a href="/contact">Get a Recommendation</a>
